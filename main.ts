@@ -12,32 +12,28 @@ for (let index = 0; index < 4; index++) {
     0
     )
 }
-let Color1 = 1000
-let Color2 = 10000
-let Color3 = 20000
-let Color4 = 30000
+let Color1 = 0
+let Color2 = 0
+let Color3 = 0
 basic.forever(function () {
-    if (Color1 > 65000) {
-        Color1 = 1000
-    } else if (Color2 > 65000) {
-        Color2 = 1000
-    } else if (Color3 > 65000) {
-        Color3 = 1000
-    } else if (Color4 > 65000) {
-        Color4 = 1000
+    if (Color1 > 255) {
+        Color1 = 0
+    } else if (Color2 > 255) {
+        Color2 = 0
+    } else if (Color3 > 255) {
+        Color3 = 0
     }
     WSTouchPiano.TP_ShowRGB(
-    Color1,
-    Color2,
-    Color3,
-    Color4
+    WSTouchPiano.TP_SetRGB(Color1, Color2, Color3),
+    WSTouchPiano.TP_SetRGB(Color3, Color1, Color2),
+    WSTouchPiano.TP_SetRGB(Color2, Color3, Color1),
+    WSTouchPiano.TP_SetRGB(Color1, Color1, Color1)
     )
     if (WSTouchPiano.TP_Press(TP_PIANO.C)) {
         WSTouchPiano.TP_PlayMusic(262, music.beat(BeatFraction.Half))
-        Color1 += 1000
-        Color2 += 1000
-        Color3 += 1000
-        Color4 += 1000
+        Color1 += 50
+        Color2 += 50
+        Color3 += 50
     } else if (WSTouchPiano.TP_Press(TP_PIANO.D)) {
         WSTouchPiano.TP_PlayMusic(294, music.beat(BeatFraction.Half))
     } else if (WSTouchPiano.TP_Press(TP_PIANO.E)) {
