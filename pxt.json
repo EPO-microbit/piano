@@ -1,0 +1,21 @@
+{
+    "name": "Piano",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "TouchPiano": "github:waveshare/touchpiano#d572746de296749d18ad9e1d689e53367000f15a"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
