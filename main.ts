@@ -24,10 +24,10 @@ basic.forever(function () {
         Color3 = 0
     }
     WSTouchPiano.TP_ShowRGB(
-    WSTouchPiano.TP_SetRGB(Color1, Color2, Color3),
-    WSTouchPiano.TP_SetRGB(Color3, Color1, Color2),
-    WSTouchPiano.TP_SetRGB(Color2, Color3, Color1),
-    WSTouchPiano.TP_SetRGB(Color1, Color1, Color1)
+    WSTouchPiano.TP_SetColor(RGB_COLOR.RED),
+    WSTouchPiano.TP_SetColor(RGB_COLOR.ORANGE),
+    WSTouchPiano.TP_SetColor(RGB_COLOR.YELLOW),
+    WSTouchPiano.TP_SetColor(RGB_COLOR.GREEN)
     )
     if (WSTouchPiano.TP_Press(TP_PIANO.C)) {
         WSTouchPiano.TP_PlayMusic(262, music.beat(BeatFraction.Half))
