@@ -20,6 +20,7 @@ for (let index = 0; index < 4; index++) {
     30000,
     WSTouchPiano.TP_SetRGB(255, 0, 119)
     )
+    basic.pause(2000)
     WSTouchPiano.TP_ShowRGB(
     0,
     0,
@@ -57,6 +58,12 @@ basic.forever(function () {
     } else if (WSTouchPiano.TP_Press(TP_PIANO.bB)) {
         music.playMelody("G B F A E C5 E G ", 120)
         Color1 = WSTouchPiano.TP_SetColor(RGB_COLOR.WHITE)
+    } else if (WSTouchPiano.TP_Press(TP_PIANO.bE)) {
+        music.playMelody("E A B E G F C E ", 120)
+    } else if (WSTouchPiano.TP_Press(TP_PIANO.bA)) {
+        music.playMelody("A E C A D B F E ", 120)
+    } else if (WSTouchPiano.TP_Press(TP_PIANO.bD)) {
+        music.playMelody("E A B G F B D A ", 120)
     }
     WSTouchPiano.TP_ShowRGB(
     Color1,
