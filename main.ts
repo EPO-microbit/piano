@@ -64,6 +64,10 @@ basic.forever(function () {
         music.playMelody("A E C A D B F E ", 120)
     } else if (WSTouchPiano.TP_Press(TP_PIANO.bD)) {
         music.playMelody("E A B G F B D A ", 120)
+    } else {
+        if (WSTouchPiano.TP_Press(TP_PIANO.bG)) {
+            music.playMelody("C D E F G F E D ", 120)
+        }
     }
     WSTouchPiano.TP_ShowRGB(
     Color1,
